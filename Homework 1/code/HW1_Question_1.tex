@@ -1,0 +1,37 @@
+To show that the solution to the optimization problem with the L1 loss function, i.e., $L(Y, f(X)) = E|Y - f(X)|$, is the median of the conditional distribution of $Y$ given $X$, we can use a probabilistic argument. Let's denote the conditional distribution of $Y$ given $X$ as $P(Y|X)$.
+
+The optimization problem can be formulated as finding $f^*$ that minimizes the expected L1 loss:
+
+\[
+f^* = \arg\min_f E|Y - f(X)|
+\]
+
+Now, we will prove that the solution $f^*$ to this optimization problem is the median of the conditional distribution $P(Y|X)$.
+
+To prove this, we'll use the fact that the median of a random variable $Y$ is the value $m$ that minimizes the following expected value:
+
+\[
+E|Y - m|
+\]
+
+Now, let's apply this property to our optimization problem:
+
+\[
+f^* = \arg\min_f E|Y - f(X)|
+\]
+
+This is equivalent to finding $f^*$ such that:
+
+\[
+f^* = \arg\min_f E|Y - f(X)| = \arg\min_f E|Y - f(X)|_{Y \sim P(Y|X)}
+\]
+
+Here, we are conditioning on $X$, so we are dealing with the conditional distribution $P(Y|X)$. Now, let's rewrite this in terms of finding the median of $P(Y|X)$:
+
+\[
+f^* = \arg\min_f E|Y - f(X)|_{Y \sim P(Y|X)} = \arg\min_f E|Y - m|_{Y \sim P(Y|X)}
+\]
+
+This is the form of the problem where we are looking for the value $m$ that minimizes the expected L1 loss for the conditional distribution $P(Y|X)$, which is the definition of the median.
+
+Therefore, we have shown that the solution $f^*$ to the optimization problem with the L1 loss function is indeed the median of the conditional distribution $P(Y|X)$.
