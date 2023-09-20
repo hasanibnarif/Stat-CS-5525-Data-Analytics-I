@@ -30,6 +30,8 @@ def knn_classifer(
         X: training data
         y: training labels
         k: number of nearest neighbors
+
+    returns: predicted labels for new data points
     """
     new_labels = np.array([])
     for new_point in new:

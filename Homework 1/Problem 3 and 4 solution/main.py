@@ -1,3 +1,11 @@
+"""
+Stat/CS 5525: Homework 1
+Author:      Kazi Hasan Ibn Arif
+Student ID:  906614469
+Email:       hasanarif@vt.edu
+Date:        Sep 10, 2023
+"""
+
 import matplotlib.pyplot as plt
 import numpy as np
 from knn import knn_classifer
